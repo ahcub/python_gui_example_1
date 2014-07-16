@@ -1,6 +1,11 @@
 from tkinter import *
 
-class Fullscreen_Window:
+
+def exit_application(_=None):
+    sys.exit(0)
+
+
+class FullscreenWindow:
     def __init__(self):
         self.tk = Tk()
         frame = Frame(self.tk, width=1000, heigh=600)
@@ -10,16 +15,13 @@ class Fullscreen_Window:
         button.pack()
         self.state = False
         self.tk.bind("<F11>", self.toggle_fullscreen)
-        self.tk.bind("<Escape>", self.exit)
+        self.tk.bind("<Escape>", exit_application)
         self.tk.mainloop()
 
-    def toggle_fullscreen(self, event=None):
+    def toggle_fullscreen(self, _=None):
         self.state = not self.state
         self.tk.attributes("-fullscreen", self.state)
         return "break"
 
-    def exit(self, event=None):
-        return sys.exit(0)
-
 if __name__ == '__main__':
-    window = Fullscreen_Window()
+    window = FullscreenWindow()
