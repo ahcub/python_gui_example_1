@@ -1,4 +1,4 @@
-python_gui_example_1
+python GUI applications sandbox
 ====================
 
-Example of windows application in python.
+Windows application with GUI in python.
