@@ -23,5 +23,6 @@ class FullscreenWindow:
         self.tk.attributes("-fullscreen", self.state)
         return "break"
 
+
 if __name__ == '__main__':
     window = FullscreenWindow()
